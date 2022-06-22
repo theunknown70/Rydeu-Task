@@ -7,8 +7,11 @@ const router = express.Router();
 export const getAmount = async (req, res) => {
     const {city, start, end} = req.body;
 
-    if(!city || city!='london' || city!='paris'){
+    if(!city){
         res.json({email: true});
+        return;
+    }else if(city=='london' || city=='paris'){
+        res.json({email: false});
         return;
     }
 
