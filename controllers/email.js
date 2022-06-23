@@ -32,6 +32,7 @@ export const getAmount = async (req, res) => {
         return;
     }
 
+    // not req
     res.json({email: false});
 }
 
