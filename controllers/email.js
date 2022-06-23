@@ -8,7 +8,7 @@ export const getAmount = async (req, res) => {
     const {city, start, end} = req.body;
 
     if(!city){
-        res.json({email: true});
+        res.json({email: true});                // req
         return;
     }else if(city=='london' || city=='paris'){
         res.json({email: false});
